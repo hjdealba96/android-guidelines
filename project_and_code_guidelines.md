@@ -599,9 +599,30 @@ String names start with a prefix that identifies the section they belong to. For
 | `title_`             | A title, i.e. a dialog title          |
 | `action_`            | An action such as "Save" or "Create"  |
 
+#### 2.3.2.3 Colors
 
+Color names must be defined using a term that refers to human perception of that color, for instance: `magenta`, `red`, `orange`, `springGreen`, `azure`, etc These names must be written using **lowerCamelCase**. You can generate a color name from a hexadecimal value using [Color Name Finder](https://colors.artyclick.com/color-name-finder/) (keep in mind this web tool doesn't support colors with alpha channels). 
 
-#### 2.3.2.3 Styles and Themes
+For naming colors with alpha channels, you should get the name of the base color and then complete it using the suffix ***Translucent* + Opacity Value** that represents the information about the alpha transparency percentage, for example:
+
+Hexadecimal value = `#a3ffffff`
+
+Color name = `whiteTranslucent64`
+
+There are some useful web tools that you can use for getting information about translucent colors:
+
+[HexColorTool](https://www.hexcolortool.com/) for getting information about the RGBA and HSLA values of a given hexadecimal value.
+
+[RGBA Color Picker](https://rgbacolorpicker.com/rgba-to-hex) for converting RGBA colors to their hexadecimal values.
+
+**Important:** Translucent colors are written in this format *#AARRGGBB*, see this [reference](https://developer.android.com/reference/android/graphics/Color#color-ints).
+
+- *AA* is the alpha channel,
+- *RR* is the red channel,
+- *GG* is the green channel and
+- *BB* is the blue channel.
+
+#### 2.3.2.4 Styles and Themes
 
 Unlike the rest of resources, style names are written in __UpperCamelCase__.
 
